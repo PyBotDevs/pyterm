@@ -20,7 +20,7 @@ This project is made as a professional terminal which is also easy to use for th
 ***PLEASE SUBMIT ISSUES AND PULL REQUESTS TO THE REPOSITORY!*** It helps us make our work easier c:
 
 ## When can I expect a fully-made version?
-After I get a life lol
+When I get a life lol
 
 ## When the project's development is complete, what will happen?
 Hopefully, if we can finish majority of development for this terminal as a CLI interface, we will also start making some windowed GUI parts of PyTerm for even easier use. 
