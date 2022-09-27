@@ -10,7 +10,7 @@ import corelibs.colors
 # import math
 
 # Config
-version = "0.0.0"
+version = "0.0.1"
 wdir = os.getcwd()
 pid = os.getpid()
 host = os.uname()[1]
@@ -28,8 +28,8 @@ def fdate(timestamp):
 def start():
     if version is None or version == "":
         print(f"==> {colors.yellow}WARNING - No version was found in app configuration{colors.end}")
-        print(f"PyTerm - Alpha Release [no version] {colors.yellow}(Unstable){colors.end}")
-    else: print(f"PyTerm - Alpha Release v{version} {colors.yellow}(Unstable){colors.end}")
+        print(f"PyTerm - Beta Release [no version] {colors.yellow}(Unstable){colors.end}")
+    else: print(f"PyTerm - Beta Release v{version} {colors.yellow}(Unstable){colors.end}")
     print(f"Running as PID: {pid}")
 
 def listen_for_command(errorcode):
