@@ -5,7 +5,7 @@ import os
 import os.path
 import pwd
 import time
-import corelibs.color
+import corelibs.colors
 # import datetime
 # import math
 
@@ -18,7 +18,7 @@ user = pwd.getpwuid(os.getuid())[0]
 errcode = None
 
 # Initialize Lib Modules
-color = corelibs.color.Stdout()
+color = corelibs.colors.Stdout()
 
 
 # Core Functions
