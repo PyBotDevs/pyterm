@@ -38,10 +38,6 @@ def listen_for_command(errorcode):
     rescode = None
     if cmd.lower() == "exit": exit(0)
     else: rescode = os.system(cmd)
-    # if rescode != 0:
-    #     print(f"{colors.red}Command failed with exit code: {rescode}{colors.end}")
-    #     errcode = rescode
-    # else: errcode = None
     return rescode
 
 def cleanup():
@@ -57,9 +53,9 @@ def cleanup():
 # Initialization
 start()
 while True:
-    try: errcode = listen_for_command(errcode)
+    try:
+        errcode = listen_for_command(errcode)
     except KeyboardInterrupt:
         print("Keyboard Interrupt initialized. Cleaning up...")
         cleanup()
         exit(130)
-
