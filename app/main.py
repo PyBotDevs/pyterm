@@ -40,9 +40,14 @@ def listen_for_command(errorcode):
     else: rescode = os.system(cmd)
     return rescode
 
-#def cleanup(reason: str):
-#    """Cleans up the environment"""
-#    print(f"Environment clean-up initialized: {reason}")
+def cleanup():
+    """Cleans up the environment of all variables"""
+    del errcode
+    del wdir
+    del pid
+    del host
+    del user
+    del colors
 
 
 # Initialization
@@ -52,5 +57,5 @@ while True:
         errcode = listen_for_command(errcode)
     except KeyboardInterrupt:
         print("Keyboard Interrupt initialized. Cleaning up...")
-        # cleanup("Manually initialized exit [KeyboardInterrupt]")
+        cleanup()
         exit(130)
