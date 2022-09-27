@@ -20,9 +20,11 @@ errcode = None
 # Initialize Lib Modules
 colors = corelibs.colors.Stdout()
 
+
 # Core Functions
 def fdate(timestamp):
     return timestamp.strftime("%m/%d/%Y, %H:%M:%S")
+
 
 # Functions
 def start():
@@ -32,6 +34,7 @@ def start():
     else: print(f"PyTerm - Beta Release v{version} {colors.yellow}(Unstable){colors.end}")
     print(f"Running as PID: {pid}")
 
+
 def listen_for_command(errorcode):
     if errorcode is None or errorcode == 0: cmd = input(f"{colors.cyan}{user}{colors.end}@{colors.blue}{host}{colors.end} <{wdir}> % ")
     else: cmd = input(f"{colors.red}{errorcode}{colors.end} {colors.cyan}{user}{colors.end}@{colors.blue}{host}{colors.end} <{wdir}> % ")
@@ -39,6 +42,7 @@ def listen_for_command(errorcode):
     if cmd.lower() == "exit": exit(0)
     else: rescode = os.system(cmd)
     return rescode
+
 
 def cleanup():
     """Cleans up the environment of all variables"""
