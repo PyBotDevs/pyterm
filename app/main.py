@@ -4,10 +4,7 @@
 import os
 import os.path
 import pwd
-import time
 import corelibs.colors
-# import datetime
-# import math
 
 # Config
 version = "0.0.1"
