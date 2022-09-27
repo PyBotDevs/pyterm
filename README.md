@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="500px" src="https://raw.githubusercontent.com/PyBotDevs/resources/base/pyterm/PyTerm%20Transparent.png">
+  <img width="400px" src="https://raw.githubusercontent.com/PyBotDevs/resources/base/pyterm/PyTerm%20Transparent.png">
 </p>
 
 <h1 align='center'>PyTerm, the Python-based OSS GNU/Linux terminal.</h1>
