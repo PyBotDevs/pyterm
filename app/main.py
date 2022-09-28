@@ -5,6 +5,7 @@ import os
 import os.path
 import pwd
 import corelibs.colors
+from utils.autodirectory import make_directory
 
 # Config
 version = "0.0.1"
@@ -30,6 +31,7 @@ def start():
         print(f"PyTerm - Beta Release [no version] {color.yellow}(Unstable){color.end}")
     else: print(f"PyTerm - Beta Release v{version} {color.yellow}(Unstable){color.end}")
     print(f"Running as PID: {pid}")
+    make_directory(user)
 
 
 def listen_for_command(errorcode):
