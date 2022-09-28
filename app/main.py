@@ -8,7 +8,7 @@ import corelibs.colors
 from utils.autodirectory import make_directory
 
 # Config
-version = "0.0.1"
+version = "2022.927.1"
 wdir = os.getcwd()
 pid = os.getpid()
 host = os.uname()[1]
