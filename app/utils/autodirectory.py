@@ -22,7 +22,3 @@ def make_directory(username: str):
         os.mkdir(f"{default_path}/pyterm/logs")
         open(f"{default_path}/pyterm/logs/{username}_info.log", "x")
         open(f"{default_path}/pyterm/logs/{username}_error.log", "x")
-
-
-# Initialization
-# make_directory(user)
