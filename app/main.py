@@ -45,12 +45,12 @@ def listen_for_command(errorcode):
 
 def cleanup():
     """Cleans up the environment of all variables"""
-    del errcode
-    del wdir
-    del pid
-    del host
-    del user
-    del color
+    if errcode is not None: del errcode
+    if wdir is not None: del wdir
+    if pid is not None: del pid
+    if host is not None: del host
+    if user is not None: del user
+    if color is not None: del color
 
 
 # Initialization
