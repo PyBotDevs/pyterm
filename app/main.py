@@ -1,4 +1,4 @@
-### NKA Development Organization 2022. For enquiries, contact <pybotdevs@outlook.com>
+### NKA Development Organization 2022. For enquiries, contact <pybotdevs@outlook.com> ###
 
 # Imports
 import os
@@ -6,6 +6,8 @@ import os.path
 import pwd
 import corelibs.colors
 from utils.autodirectory import make_directory
+from threading import Thread
+import guis.settings
 
 # Config
 version = "2022.927.1"
@@ -39,6 +41,7 @@ def listen_for_command(errorcode):
     else: cmd = input(f"{color.red}{errorcode}{color.end} {color.cyan}{user}{color.end}@{color.blue}{host}{color.end} <{wdir}> % ")
     rescode = None
     if cmd.lower() == "exit": exit(0)
+    elif cmd.lower() == "settings": open_window("settings")
     else: rescode = os.system(cmd)
     return rescode
 
@@ -51,6 +54,12 @@ def cleanup():
     if host is not None: del host
     if user is not None: del user
     if color is not None: del color
+
+
+def open_window(window_name: str):
+    if window_name == "settings":
+        window = Thread(target=guis.settings.run)
+        window.start()
 
 
 # Initialization
